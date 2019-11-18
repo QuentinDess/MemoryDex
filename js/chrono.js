@@ -36,6 +36,9 @@ function chrono(){
 //démarre mon chronomètre au chargment de la page
 
 document.addEventListener("onload", start());
+
+
+
 // lors du dernier click sur le bon boutton
 // document.querySelector("button").addEventListener("click", function(){
 //   clearInterval(t);
@@ -53,3 +56,9 @@ document.addEventListener("onload", start());
 
 //   formEltChrono.submit();
 // })
+
+
+
+//pour savoir si je cible le pokemon 
+// if (document.target.queryselectorAll(good image) or document.target.length = 1)
+// ==> ca voudrat dire que si je cible la bonne image  ou la seule image qui n'a que un de longueur)
