@@ -29,8 +29,12 @@ function chrono(){
      /*afficher les nouvelle valeurs*/
     
      span[0].innerHTML=mn+" min";
+     if(s <= 9){
+    span[1].innerHTML="0"+s+" s";
+     }
+    else{
      span[1].innerHTML=s+" s";
-    
+    }
 
 };
 //démarre mon chronomètre au chargment de la page
@@ -58,7 +62,3 @@ document.addEventListener("onload", start());
 // })
 
 
-
-//pour savoir si je cible le pokemon 
-// if (document.target.queryselectorAll(good image) or document.target.length = 1)
-// ==> ca voudrat dire que si je cible la bonne image  ou la seule image qui n'a que un de longueur)
