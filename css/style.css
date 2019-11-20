@@ -5,7 +5,7 @@
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     border: black solid 1px;
-    height: 50%;
+    height: 30%;
     width:50%; 
     margin:auto;
     }
@@ -245,3 +245,13 @@ img{
 .none{
     display: none;
 }
+
+.MsgLvl{
+    width: 20%;
+    height:20%;
+    position: absolute;
+    left: 40%;
+    top:40%;
+    margin: auto;
+    background:blue;
+} 
