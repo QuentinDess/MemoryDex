@@ -2,6 +2,8 @@
 
 session_start(); 
 
+echo "Salut";
+
 // Création USERS
 
 // READ des USERS dans un tableau avec association de la commande pour UPDATE ou DELETE 
@@ -27,7 +29,7 @@ $data = $dbCheck->fetchAll(PDO::FETCH_ASSOC);
                 <th>name</th>
                 <th>password</th>
                 <th>Rôle</th>
-                <th colspan=2>Actions</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -36,14 +38,8 @@ $data = $dbCheck->fetchAll(PDO::FETCH_ASSOC);
             <tr>
                      <td> <?php echo($value['id']) ?> </td> 
                      <td> <?php echo($value['name']) ?> </td> 
-                     <td> <?php echo(password_hash($value['password'], PASSWORD_DEFAULT)) ?> </td> 
-                     <td> <?php if ($value['id_Roles'] == 1 ) {
-                                        echo ('admin');
-                                        }else {
-                                        echo ('gamer');    
-                                        };  ?>  </td> 
-                     <td> <form action="../db/update.php" Method="POST"><input type="submit" value="Update"></form></td>
-                     <td colspan=2><form action="../db/delete.php" Method="POST"><input type="submit" value="Delete"></form></td>
+                     <td> <?php echo($value['password'])  ?> </td> 
+                     <td> <?php echo($value['id_Roles'])  ?>  </td> 
             </tr>
                 <?php
                 }
