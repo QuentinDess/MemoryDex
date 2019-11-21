@@ -1,5 +1,22 @@
 <?php
 include '../templates/header_File.php';
+include '../security/security_admin.php';
+// Mise à jour du USER 
+var_dump($_POST);
+var_dump($_SESSION);
+?>
+
+<form action="" method="POST"> 
+    <label for="name"></label>
+    <input type="text" placeholder="<?php $_POST['name']?> " name="name" require>
+
+    <label for="password"></label>
+    <input type="password" placeholder=" $_POST['password" name="password" require>
+
+    <input type="submit" value="Se connecter">
+</form>
+
+
 // Mise à jour du USER 
 
 // Récupère l'ID 
@@ -70,7 +87,6 @@ if (isset($_POST['name']) && !empty($_POST['name']) && isset($_POST['password'])
 
     header('location: ../admin/adminUser.php');
 }
-
 
 
 

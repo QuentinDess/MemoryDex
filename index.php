@@ -14,11 +14,23 @@ include 'templates/header.php';
                 <label for="password"></label>
                 <input type="password" placeholder="Votre mot de passe..." name="password" require>
                 <input class="button" type="submit" value="Se connecter">
+
             </form>
               
          
         </div>
     </div>
+</div>
+
+<div class="start_game">
+    <img src="image/rules_pikachu.png">
+</div>
+
+
+    
+</main>  
+<script src="js/rules.js"></script>
+
 <div class="logo">
     <h1>Memorydex</h1>
 </div>
@@ -28,7 +40,7 @@ include 'templates/header.php';
 
 
 
-    
+  
 </body>
 </html>
 

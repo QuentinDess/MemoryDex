@@ -21,26 +21,50 @@ session_start();
 
                 <?php 
                 if ($_SESSION == true) {
+                        
                     if ($_SESSION['id_Roles'] == 1 ) {
                         ?> 
-                        <li><a href="../admin/adminUser.php"> <?php echo $_SESSION['name']; ?> </a></li>
+                        <li>
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="admin/adminUser.php"> <?php echo $_SESSION['name']; ?> </a>
+                        </li>  
+                        <li>
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="../db/logout.php"> Log Out </a> 
+                        </li> 
+                                         
                         <?php
                     } else if ($_SESSION['id_Roles'] == 2) {
                         ?> 
-                        <li><a href="../gamer/crudGamer.php"> <?php echo $_SESSION['name'];?> </a></li>
+                        <li>  
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="gamer/crudGamer.php"> <?php echo $_SESSION['name'];?> </a>
+                        </li>
+                        <li>
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="../db/logout.php"> Log Out </a> 
+                        </li> 
                         <?php
                     }
                 }
-                ?>
-      
+                
+                if (!isset($_SESSION) or empty($_SESSION)){
+               
+              
+            ?>
             <li>
                 <form class="form-inline my-2 my-lg-0" action="../admin/signUpForm.php">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Signup</button>
                 </form>
             </li>
+            <?php
+        }  
+        ?>
         </ul>    
     </nav>
+    <div class="banner">
+    </div>
 </header> 
+<main> 
+       
+   
+
    
  
 
