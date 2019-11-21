@@ -1,7 +1,7 @@
 <?php
 session_start();
 $dbUser="root";
-$dbPass="";
+$dbPass="000000";
 
 $dbConnection = new PDO('mysql:host=localhost;dbname=MemoryDex', $dbUser, $dbPass);
 

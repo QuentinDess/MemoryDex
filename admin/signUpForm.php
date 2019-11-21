@@ -6,7 +6,7 @@ include '../templates/header_File.php';
 <div class="container">
     <div class = "box">
         <div class ="test"> 
-            <form method="POST" action="../database/create.php">
+            <form method="POST" action="../db/create.php">
                 <h1>Register to play</h1>
                 <br>
                 <i class='fas fa-door-open' style='font-size:155px;color:white'></i>
