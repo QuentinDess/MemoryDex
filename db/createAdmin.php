@@ -15,12 +15,12 @@ $dbConnection = new PDO('mysql:host=localhost;dbname=MemoryDex', $dbuser, $dbpas
 $db = "INSERT INTO Users(name, password, id_Roles) VALUES (:name, :password, :userRole);";
 
 $createUser = $dbConnection->prepare($db);
-
+// Récupere les informations cachées
 $createUser->bindParam(":name", $_POST['name'], PDO::PARAM_STR);
 $createUser->bindParam(":password", $_POST['password']);
 $createUser->bindParam(":userRole", $_POST['userRole']);
 
-
+// Execute la requête 
 $createUser->execute();
 
 
