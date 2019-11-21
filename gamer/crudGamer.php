@@ -1,47 +1,47 @@
 <?php 
 include '../templates/header_File.php';
 
-echo "Salut";
 
-// Création USERS
-
-// READ des USERS dans un tableau avec association de la commande pour UPDATE ou DELETE 
+// READ du USER dans un tableau avec association de la commande pour UPDATE ou DELETE 
 $dbUser = 'root';
 $dbPass = '000000';
 // Connection with db
 $dbConnection = new PDO('mysql:host=localhost;dbname=MemoryDex', $dbUser, $dbPass);
 // Check username and password 
-$dbQuery = "SELECT id, name, password, id_Roles FROM Users ORDER BY id ASC";
+$dbQuery = "SELECT id, name, password FROM Users WHERE id = :id";
 // Préparation de la requête 
 $dbCheck = $dbConnection->prepare($dbQuery);
+$dbCheck->bindParam(':id', $_SESSION['id']);
 // Exécuter la requête 
 $dbCheck->execute();
 // Récupérer le résultat de la requête
-$data = $dbCheck->fetchAll(PDO::FETCH_ASSOC);
-// Inscrire le résultat dans un tableau 
+$data = $dbCheck->fetch(PDO::FETCH_ASSOC);
+// Table de présentation des informations de l'utilisateur 
 ?> 
-
     <table>
         <thead>
             <tr>
-                <th>id</th>
-                <th>name</th>
-                <th>password</th>
-                <th>Rôle</th>
-                <th>Action</th>
+                <th>Name</th>
+                <th>Password</th>
+                <th colspan=2>Actions</th>
             </tr>
         </thead>
         <tbody>
-        <!-- Pour chaque lignes du tableau $data : -->
-                <?php foreach ($data as $key => $value) { ?>
             <tr>
-                     <td> <?php echo($value['id']) ?> </td> 
-                     <td> <?php echo($value['name']) ?> </td> 
-                     <td> <?php echo($value['password'])  ?> </td> 
-                     <td> <?php echo($value['id_Roles'])  ?>  </td> 
+                <td> <?php echo $data['name'] ?> </td> 
+                <td> <?php echo $data['password']  ?> </td> 
+                <td>
+                    <form action="../db/updateUser.php" Method="POST">
+                        <input type="hidden" name="id" value="<?php echo $data['id'] ?>">
+                        <input type="submit" value="Update">
+                    </form>
+                </td>
+                <td>
+                    <form action="../db/deleteUser.php" Method="POST">
+                        <input type="hidden" name="id" value="<?php echo $data['id'] ?>">
+                        <input type="submit" value="Delete">
+                    </form>
+                </td>   
             </tr>
-                <?php
-                }
-                ?>
         </tbody>
     </table>

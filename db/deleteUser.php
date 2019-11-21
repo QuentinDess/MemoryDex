@@ -13,14 +13,13 @@ $dbQuery = "DELETE FROM Users WHERE id = :id";
 
 // Préparation de la requête suppression
 $dbCheck = $dbConnection->prepare($dbQuery);
-// Exécuter la requête suppresion
+// Récupere les informations cachées 
 $dbCheck->bindParam(':id', $_POST['id']);
-
-
+// Exécuter la requête suppression
 $dbCheck->execute();
 } catch (PDOException $e ) {
     echo "Erreur !: $e->getMessage()";
     die;
 }
 
-header('Location: ../admin/adminUser.php');
+header('Location: ../admin/signUpForm.php');

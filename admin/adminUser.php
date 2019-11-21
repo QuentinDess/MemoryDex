@@ -45,6 +45,7 @@ $data = $dbCheck->fetchAll(PDO::FETCH_ASSOC);
     echo "Erreur !: $e->getMessage()";
     die;
 }
+// Installation des informations dans un tableau 
 ?> 
 
     <table>
@@ -75,12 +76,12 @@ $data = $dbCheck->fetchAll(PDO::FETCH_ASSOC);
                         <input type="submit" value="Update">
                     </form>
                 </td>
-                     <td>
-                        <form action="../db/delete.php" Method="POST">
-                            <input type="hidden" name="id" value="<?php echo $value['id'] ?>">
-                            <input type="submit" value="Delete">
-                        </form>
-                     </td>
+                <td>
+                    <form action="../db/delete.php" Method="POST">
+                        <input type="hidden" name="id" value="<?php echo $value['id'] ?>">
+                        <input type="submit" value="Delete">
+                    </form>
+                </td>
             </tr>
                 <?php
                 }
