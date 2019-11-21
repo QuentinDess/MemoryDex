@@ -2,7 +2,7 @@
 session_start();
 
 $dbUser = 'root';
-$dbPass = '000000';
+$dbPass = '';
 // Check connection
 if (isset($_POST) && !empty ($_POST)) {
     if (isset($_POST["name"]) && !empty ($_POST["name"]) && isset($_POST["password"]) && !empty($_POST["password"])) {

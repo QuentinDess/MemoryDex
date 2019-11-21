@@ -1,6 +1,6 @@
 <?php
 $dbuser = 'root';
-$dbpass = '000000';
+$dbpass = '';
 
 if ($_POST['userRole'] == 'gamer') {
     $_POST['userRole'] = 2;

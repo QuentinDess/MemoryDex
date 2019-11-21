@@ -5,7 +5,7 @@ include '../templates/header_File.php';
 // Récupère l'ID 
 try {
 $dbUser = 'root';
-$dbPass = '000000';
+$dbPass = '';
 // Connection with db
 $dbConnection = new PDO('mysql:host=localhost;dbname=MemoryDex', $dbUser, $dbPass);
 // Check username and password 

@@ -1,6 +1,6 @@
 <?php
 $dbUser="root";
-$dbPass="000000";
+$dbPass="";
 
 $dbConnection = new PDO('mysql:host=localhost;dbname=MemoryDex', $dbUser, $dbPass);
 

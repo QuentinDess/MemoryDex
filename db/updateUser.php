@@ -1,11 +1,12 @@
 <?php
 include '../templates/header_File.php';
+include '../security/security_gamer.php';
 // Mise à jour du USER 
 
 // Récupère l'ID 
 try {
 $dbUser = 'root';
-$dbPass = '000000';
+$dbPass = '';
 // Connection with db
 $dbConnection = new PDO('mysql:host=localhost;dbname=MemoryDex', $dbUser, $dbPass);
 // Check username and password 
@@ -27,8 +28,8 @@ $data = $dbCheck->fetch(PDO::FETCH_ASSOC);
 }
 
 ?>
-
-<form action="updateUser.php" method="POST"> 
+<div class="update_container">
+<form  class="update_form" action="updateUser.php" method="POST"> 
     <input type="hidden" name="id" value="<?php echo $data['id'] ?>">
 
     <label for="name">Nom</label>
@@ -37,15 +38,15 @@ $data = $dbCheck->fetch(PDO::FETCH_ASSOC);
     <label for="password">Mot de passe</label>
     <input type="password" name="password" value="<?php echo $data['password'] ?>" require>
 
-    <input type="submit" value="Enregistrer">
+    <input class="update_input" type="submit" value="Enregistrer">
 </form>
-
+</div>
 <?php
 
 if (isset($_POST['name']) && !empty($_POST['name']) && isset($_POST['password']) && !empty($_POST['password'])) {
     try {
         $dbUser = 'root';
-        $dbPass = '000000';
+        $dbPass = '';
         // Connection with db
         $dbConnection = new PDO('mysql:host=localhost;dbname=MemoryDex', $dbUser, $dbPass);
         // Check username and password 
