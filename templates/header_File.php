@@ -23,11 +23,11 @@ session_start();
                 if ($_SESSION == true) {
                     if ($_SESSION['id_Roles'] == 1 ) {
                         ?> 
-                        <li><a href="admin/adminUser.php"> <?php echo $_SESSION['name']; ?> </a></li>
+                        <li><a href="../admin/adminUser.php"> <?php echo $_SESSION['name']; ?> </a></li>
                         <?php
                     } else if ($_SESSION['id_Roles'] == 2) {
                         ?> 
-                        <li><a href="gamer/crudGamer.php"> <?php echo $_SESSION['name'];?> </a></li>
+                        <li><a href="../gamer/crudGamer.php"> <?php echo $_SESSION['name'];?> </a></li>
                         <?php
                     }
                 }
