@@ -9,23 +9,18 @@ $dbPass = '000000';
 // Connection with db
 $dbConnection = new PDO('mysql:host=localhost;dbname=MemoryDex', $dbUser, $dbPass);
 // Check username and password 
-$dbQuery = "SELECT id, name, password FROM Users WHERE id = :id";
+$dbQuery = "DELETE FROM Users WHERE id = :id";
 
-// Préparation de la requête 
+// Préparation de la requête suppression
 $dbCheck = $dbConnection->prepare($dbQuery);
-// Exécuter la requête 
-
+// Exécuter la requête suppresion
 $dbCheck->bindParam(':id', $_POST['id']);
 
 
 $dbCheck->execute();
-// Récupérer le résultat de la requête
-$data = $dbCheck->fetch(PDO::FETCH_ASSOC);
 } catch (PDOException $e ) {
     echo "Erreur !: $e->getMessage()";
     die;
 }
 
-var_dump($data);
-
-
+header('Location: ../admin/adminUser.php');
