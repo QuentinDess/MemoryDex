@@ -21,5 +21,5 @@ $dbCheck->execute();
     echo "Erreur !: $e->getMessage()";
     die;
 }
-
-header('Location: ../admin/signUpForm.php');
+session_destroy();
+header('Location: ../index.php');

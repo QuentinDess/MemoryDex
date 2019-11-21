@@ -1,7 +1,7 @@
 <?php
 include '../templates/header_File.php';
+include '../security/security_admin.php';
 // Mise à jour du USER 
-
 // Récupère l'ID 
 try {
 $dbUser = 'root';
@@ -10,14 +10,10 @@ $dbPass = '000000';
 $dbConnection = new PDO('mysql:host=localhost;dbname=MemoryDex', $dbUser, $dbPass);
 // Check username and password 
 $dbQuery = "SELECT id, name, password FROM Users WHERE id = :id";
-
 // Préparation de la requête 
 $dbCheck = $dbConnection->prepare($dbQuery);
 // Exécuter la requête 
-
 $dbCheck->bindParam(':id', $_POST['id']);
-
-
 $dbCheck->execute();
 // Récupérer le résultat de la requête
 $data = $dbCheck->fetch(PDO::FETCH_ASSOC);
@@ -25,7 +21,6 @@ $data = $dbCheck->fetch(PDO::FETCH_ASSOC);
     echo "Erreur !: $e->getMessage()";
     die;
 }
-
 ?>
 
 <form action="update.php" method="POST"> 
@@ -41,7 +36,6 @@ $data = $dbCheck->fetch(PDO::FETCH_ASSOC);
 </form>
 
 <?php
-
 if (isset($_POST['name']) && !empty($_POST['name']) && isset($_POST['password']) && !empty($_POST['password'])) {
     try {
         $dbUser = 'root';
@@ -50,31 +44,18 @@ if (isset($_POST['name']) && !empty($_POST['name']) && isset($_POST['password'])
         $dbConnection = new PDO('mysql:host=localhost;dbname=MemoryDex', $dbUser, $dbPass);
         // Check username and password 
         $dbQuery = "UPDATE Users SET name = :name, password = :password WHERE id = :id";
-
         // Préparation de la requête 
         $dbCheck = $dbConnection->prepare($dbQuery);
         // Exécuter la requête 
-
         $dbCheck->bindParam(':id', $_POST['id']);
         $dbCheck->bindParam(':name', $_POST['name']);
         $dbCheck->bindParam(':password', $_POST['password']);
-
         $dbCheck->execute();
         // Récupérer le résultat de la requête
         $data = $dbCheck->fetch(PDO::FETCH_ASSOC);
-
     } catch (PDOException $e ) {
         echo "Erreur !: $e->getMessage()";
         die;
     }
-
     header('location: ../admin/adminUser.php');
 }
-
-
-
-
-
-
-
-

@@ -1,5 +1,11 @@
 <?php 
 include '../templates/header_File.php';
+
+include '../security/security_admin.php';
+// Création USERS
+
+// READ des USERS dans un tableau avec association de la commande pour UPDATE ou DELETE 
+
 ?>
 <a href="../gamer/game.php">Tu veux jouer?</a>
 
@@ -28,6 +34,7 @@ include '../templates/header_File.php';
 <?php
 // READ des USERS dans un tableau avec association de la commande pour UPDATE ou DELETE
 try { 
+
 $dbUser = 'root';
 $dbPass = '000000';
 // Connection with db
@@ -41,11 +48,13 @@ $dbCheck->execute();
 // Récupérer le résultat de la requête
 $data = $dbCheck->fetchAll(PDO::FETCH_ASSOC);
 // Inscrire le résultat dans un tableau 
+
 } catch (PDOException $e ) {
     echo "Erreur !: $e->getMessage()";
     die;
 }
 // Installation des informations dans un tableau 
+
 ?> 
 
     <table>
@@ -59,8 +68,8 @@ $data = $dbCheck->fetchAll(PDO::FETCH_ASSOC);
             </tr>
         </thead>
         <tbody>
-        <!-- Pour chaque lignes du tableau $data : -->
-                <?php foreach ($data as $key => $value) { ?>
+               <!-- Pour chaque lignes du tableau $data : -->
+               <?php foreach ($data as $key => $value) { ?>
             <tr>
                 <td> <?php echo($value['id']) ?> </td> 
                 <td> <?php echo($value['name']) ?> </td> 
@@ -88,5 +97,3 @@ $data = $dbCheck->fetchAll(PDO::FETCH_ASSOC);
                 ?>
         </tbody>
     </table>
-
-    

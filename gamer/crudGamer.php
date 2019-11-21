@@ -1,13 +1,23 @@
 <?php 
 include '../templates/header_File.php';
 
+include '../security/security_gamer.php';
+
+
+
+// Création USERS
+
+// READ des USERS dans un tableau avec association de la commande pour UPDATE ou DELETE 
+
 
 // READ du USER dans un tableau avec association de la commande pour UPDATE ou DELETE 
+
 $dbUser = 'root';
 $dbPass = '000000';
 // Connection with db
 $dbConnection = new PDO('mysql:host=localhost;dbname=MemoryDex', $dbUser, $dbPass);
 // Check username and password 
+
 $dbQuery = "SELECT id, name, password FROM Users WHERE id = :id";
 // Préparation de la requête 
 $dbCheck = $dbConnection->prepare($dbQuery);

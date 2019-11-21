@@ -1,5 +1,6 @@
 <?php
 include '../templates/header_File.php';
+include '../security/security_gamer.php';
 ?>
 
 <main>        

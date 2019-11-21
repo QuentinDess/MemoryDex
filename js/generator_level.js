@@ -87,7 +87,7 @@ divSalaElt.forEach(element =>{
 let img3=document.createElement("img");
 img3.setAttribute("class", "good_guess1");
 img3.src="../image/image_sala/image1.png";
-let special_div_sala=document.querySelector(` .div_sala${ Math.floor(Math.random() * 16)}`);
+let special_div_sala=document.querySelector(` .div_sala${ Math.floor(Math.random() * (16-1) + 1 )}`);
 special_div_sala.replaceChild(img3, special_div_sala.childNodes[1]);
 
 
@@ -145,7 +145,7 @@ divCaraElt.forEach(element =>{
 let img4=document.createElement("img");
 img4.setAttribute("class", "good_guess3");
 img4.src="../image/image_cara/image1.png";
-let special_div_cara=document.querySelector(` .div_cara${ Math.floor(Math.random() * 16)}`);
+let special_div_cara=document.querySelector(` .div_cara${ Math.floor(Math.random() * (16-1) + 1 )}`);
 special_div_cara.replaceChild(img4, special_div_cara.childNodes[1]);
 
 
@@ -197,7 +197,7 @@ divBulbiElt.forEach(element =>{
 let img5=document.createElement("img");
 img5.setAttribute("class", "good_guess4");
 img5.src="../image/image_bulbi/image1.png";
-let special_div_bulbi=document.querySelector(` .div_bulbi${ Math.floor(Math.random() * 16)}`);
+let special_div_bulbi=document.querySelector(` .div_bulbi${ Math.floor(Math.random() * (16-1) + 1 )}`);
 special_div_bulbi.replaceChild(img5, special_div_bulbi.childNodes[1]);
 
 
@@ -245,7 +245,7 @@ divMeloElt.forEach(element =>{
 let img6=document.createElement("img");
 img6.setAttribute("class", "good_guess5");
 img6.src="../image/image_melo/image1.png";
-let special_div_melo=document.querySelector(` .div_melo${ Math.floor(Math.random() * 16)}`);
+let special_div_melo=document.querySelector(` .div_melo${ Math.floor(Math.random() * (16-1) + 1 )}`);
 special_div_melo.replaceChild(img6, special_div_melo.childNodes[1]);
 
 
