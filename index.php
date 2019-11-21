@@ -15,19 +15,19 @@ session_start();
         <ul>
             <li>Test</li>
             <li>Test</li>
-            <li>
                 <?php 
-                if ($_SESSION['id_Roles'] == 1 ) {
+                if ($_SESSION == true) {
+                    if ($_SESSION['id_Roles'] == 1 ) {
                         ?> 
-                        <a href="admin/adminUser.php"> <?php echo $_SESSION['name']; ?> </a>
+                        <li><a href="admin/adminUser.php"> <?php echo $_SESSION['name']; ?> </a></li>
                         <?php
-                    } else {
+                    } else if ($_SESSION['id_Roles'] == 2) {
                         ?> 
-                        <a href="gamer/crudGamer.php"> <?php echo $_SESSION['name'];?> </a>
+                        <li><a href="gamer/crudGamer.php"> <?php echo $_SESSION['name'];?> </a></li>
                         <?php
                     }
+                }
                 ?>
-            </li>
         </ul>
     </nav>
 </header>
