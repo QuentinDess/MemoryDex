@@ -66,6 +66,7 @@ body{
     background-color: rgba(255, 192, 203, 0);
 }
 
+
 .banner{
     background: url('banner.png');
     background-size: contain;
@@ -122,4 +123,4 @@ a:hover{
     height: 10%;
     width: 10%;
 }
-/*form sign up*/
+

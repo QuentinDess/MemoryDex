@@ -13,7 +13,8 @@ include 'templates/header.php';
 
                 <label for="password"></label>
                 <input type="password" placeholder="Votre mot de passe..." name="password" require>
-                <input class="button " type="submit" value="Se connecter">
+                <input class="button" type="submit" value="Se connecter">
+
             </form>
               
          
@@ -29,6 +30,17 @@ include 'templates/header.php';
     
 </main>  
 <script src="js/rules.js"></script>
+
+<div class="logo">
+    <h1>Memorydex</h1>
+</div>
+
+
+       
+
+
+
+  
 </body>
 </html>
 

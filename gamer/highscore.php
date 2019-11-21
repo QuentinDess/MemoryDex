@@ -44,4 +44,6 @@ include '../db/read_highscore.php';
         ?>
 </tbody>
 </table>
-    </main>
+
+</main>
+
