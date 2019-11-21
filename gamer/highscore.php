@@ -1,4 +1,6 @@
 <?php
+include '../templates/header_File.php';
+include '../security/security_gamer.php';
 include '../db/read_highscore.php';
 ?>
 <h1>Meilleurs Scores Perso</h1>
@@ -42,3 +44,4 @@ include '../db/read_highscore.php';
         ?>
 </tbody>
 </table>
+    </main>
