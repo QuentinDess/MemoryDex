@@ -23,7 +23,11 @@ if (isset($_POST) && !empty ($_POST)) {
                 $_SESSION['id'] = $data['id'];
                 $_SESSION['name'] = $data['name'];
                 $_SESSION['id_Roles'] = $data['id_Roles'];
-                header('Location:../game.php');
+                    if ($_SESSION['id_Roles'] == 1) {
+                        header('../admin/adminUser.php');
+                    } else {
+                        header('Location:../game.php');
+                    }
             } else {
                 header('Location: ../index.php'); 
             }   
