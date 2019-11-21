@@ -67,4 +67,4 @@ $data = $dbCheck->fetchAll(PDO::FETCH_ASSOC);
         </tbody>
     </table>
 
-    
+    <a href="../gamer/game.php">Tu veux jouer?</a>

@@ -29,7 +29,7 @@ if (isset($_POST) && !empty ($_POST)) {
                 $_SESSION['name'] = $data['name'];
                 $_SESSION['id_Roles'] = $data['id_Roles'];
                     if ($_SESSION['id_Roles'] == 2) {
-                        header('Location:../game.php');
+                        header('Location:../gamer/game.php');
                     } else {
                         header('Location:../admin/adminUser.php');
                     }
