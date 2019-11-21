@@ -27,5 +27,5 @@ $createUser->execute();
 
 // var_dump($createUser);die;
 
-header('Location: ../adminUser.php');
+header('Location: ../index.php');
 

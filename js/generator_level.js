@@ -267,7 +267,7 @@ document.querySelector(".good_guess5").addEventListener("click", function(){
         // creer un form
         let formEltChrono = document.createElement("form");
         formEltChrono.setAttribute("methode","GET");
-        formEltChrono.setAttribute("action","./test.php");
+        formEltChrono.setAttribute("action","../db/test.php");
         formEltChrono.classList.add("opacity");
         document.querySelector("main").appendChild(formEltChrono);
         //cree mon input pour inserer la valeur du chron

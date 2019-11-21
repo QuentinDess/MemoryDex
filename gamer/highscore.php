@@ -1,4 +1,5 @@
 <?php
+
 include '../db/read_highscore.php';
 ?>
 <h1>Meilleurs Scores Perso</h1>

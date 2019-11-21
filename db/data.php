@@ -2,7 +2,7 @@
 session_start();
 
 $dbUser = 'root';
-$dbPass = '000000';
+$dbPass = '';
 // Check connection
 if (isset($_POST) && !empty ($_POST)) {
     if (isset($_POST["name"]) && !empty ($_POST["name"]) && isset($_POST["password"]) && !empty($_POST["password"])) {
@@ -23,7 +23,7 @@ if (isset($_POST) && !empty ($_POST)) {
                 $_SESSION['id'] = $data['id'];
                 $_SESSION['name'] = $data['name'];
                 $_SESSION['id_Roles'] = $data['id_Roles'];
-                header('Location:../game.php');
+                header('Location:../gamer/game.php');
             } else {
                 header('Location: ../index.php'); 
             }   
