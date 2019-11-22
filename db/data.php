@@ -2,13 +2,13 @@
 session_start();
 
 
-// Check connection
+// Vérifie les paramètres de connexion
 if (isset($_POST) && !empty ($_POST)) {
     if (isset($_POST["name"]) && !empty ($_POST["name"]) && isset($_POST["password"]) && !empty($_POST["password"])) {
         try {
-        // connection à la db    
+        // connexion à la DB    
             include 'dbconnexion.php';
-        // Check username and password 
+        // Requête SQL
         $dbQuery = "SELECT * FROM Users WHERE Users.name = :name AND Users.password = :password";
         // Préparation de la requête 
         $dbCheck = $dbConnection->prepare($dbQuery);
