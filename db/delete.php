@@ -1,18 +1,15 @@
 <?php
 include '../templates/header_File.php';
-// Mise à jour du USER 
 
-
-// Récupère l'ID 
 try {
-// Connection with db
+// Connexion à la DB
 include 'dbconnexion.php';
-// Check username and password 
+// Requête de suppression des ID jeu
 $dbQuery1= "DELETE  FROM Game where id_Users =:id ";
 $dbCheck1 = $dbConnection->prepare($dbQuery1);
 $dbCheck1->bindParam(':id', $_POST['id']);
 $dbCheck1->execute();
-
+// Requête de suppression de l'ID USER
 $dbQuery = "DELETE FROM Users WHERE id = :id";
 // Préparation de la requête suppression
 $dbCheck = $dbConnection->prepare($dbQuery);
