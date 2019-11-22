@@ -1,3 +1,5 @@
+/* voici la feuille de style lié à toutes les pages excepté la page d'index*/
+
 *{
     margin:0;
     padding:0;
@@ -327,6 +329,7 @@ span{
 .crudgamer_container{
     margin-top: 10%;
 }
+/* le css associé au responsive */
 @media screen and (max-width: 800px){
     .crudgamer_container{
         margin-top: 40%;
