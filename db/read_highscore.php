@@ -1,6 +1,6 @@
 <?php
 include 'dbconnexion.php';
-
+// Je crée mes requêtes pour selectionner les score solo et multi dans la base de donnée
 $dbQuery = "SELECT score, name from Game, Users where Game.id_Users=Users.id and Users.id like :id_session_users order by score limit 10;";
 $dbQuery2= "SELECT score, name from Game, Users where Game.id_Users=Users.id order by score limit 10;";
 
