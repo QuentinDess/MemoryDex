@@ -329,6 +329,12 @@ span{
 .crudgamer_container{
     margin-top: 10%;
 }
+.alert-danger:hover{
+    background-color: red;
+}
+.alert-success:hover{
+    background: #2c8021;
+}
 /* le css associé au responsive */
 @media screen and (max-width: 800px){
     .crudgamer_container{

@@ -27,17 +27,17 @@ $data = $dbCheck->fetch(PDO::FETCH_ASSOC);
 
 ?>
 <div class="update_container">
-<h2>Vous pouvez modifier vos login</h2>
+<h2>Edit Login</h2>
 <form  class="update_form" action="updateUser.php" method="POST"> 
     <input type="hidden" name="id" value="<?php echo $data['id'] ?>">
 
-    <label for="name">Nom</label>
-    <input type="text" name="name" value="<?php echo $data['name'] ?>" require>
+    <label for="name">Username</label>
+    <input type="text"  class="form-control" name="name" value="<?php echo $data['name'] ?>" require>
 
-    <label for="password">Mot de passe</label>
-    <input type="password" name="password" value="<?php echo $data['password'] ?>" require>
+    <label for="password">Password</label>
+    <input type="text"  class="form-control" name="password" value="<?php echo $data['password'] ?>" require>
 
-    <input class="update_input" type="submit" value="Enregistrer">
+    <input class="update_input alert-success" type="submit" value="Update">
 </form>
 </div>
 <?php

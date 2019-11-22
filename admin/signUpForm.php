@@ -13,11 +13,11 @@ include '../templates/header_File.php';
                 <br>
                 <br>
                 <label for="name"></label>
-                <input type="text" placeholder="Username" name="name" required>
+                <input type="text" class="form-control" placeholder="Username" name="name" required>
                 <br>
                 <br>
                 <label for="password"></label>
-                <input type="password" placeholder="Password" name="password" required>
+                <input type="password"  class="form-control" placeholder="Password" name="password" required>
                 <br>
                 <br>
                 <input class="button2" type="submit" value="Bienvenue !">

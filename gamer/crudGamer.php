@@ -45,17 +45,18 @@ $data = $dbCheck->fetch(PDO::FETCH_ASSOC);
                 <td>
                     <form action="../db/updateUser.php" Method="POST">
                         <input type="hidden" name="id" value="<?php echo $data['id'] ?>">
-                        <input type="submit" value="Update">
+                        <input type="submit" class="alert-success" value="Update">
                     </form>
                 </td>
                 <td>
                     <form action="../db/deleteUser.php" Method="POST">
                         <input type="hidden" name="id" value="<?php echo $data['id'] ?>">
-                        <input type="submit" value="Delete">
+                        <input type="submit" class="alert-danger" value="Delete">
                     </form>
                 </td>   
             </tr>
         </tbody>
     </table>
-    <button class="start_game button3" ><a href="../gamer/game.php">Play</a>
+    <form action="../gamer/game.php">
+    <button class="start_game button3" > Play </button>
 </div>

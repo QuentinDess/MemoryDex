@@ -13,18 +13,19 @@ include '../security/security_admin.php';
 // Création USERS
 ?>
 <div>
+    
     <form  class="create_container" action="../db/createAdmin.php" method="POST">
-      
+    <h2> Create User </h2>
             <label for="Name">Nom</label>
-            <input type="text" name="name">
+            <input type="text" class="form-control" name="name">
         
             <label for="password">Mot de passe</label>
-            <input type="password" name="password">
+            <input type="password" class="form-control" name="password">
         
             <input type="radio" name="userRole" value="gamer" checked> Gamer<br>
             <input type="radio" name="userRole" value="admin"> Admin <br> 
         
-            <input type="submit" value="Create">
+            <input type="submit" class="alert-success" value="Create">
       
     </form>
 </div>
@@ -79,13 +80,13 @@ $data = $dbCheck->fetchAll(PDO::FETCH_ASSOC);
                 <td colspan=2>
                     <form action="../db/update.php" Method="POST">
                         <input  type="hidden" name="id" value="<?php echo $value['id'] ?>">
-                        <input class="button" type="submit" value="Update">
+                        <input class="button alert-success" type="submit" value="Update">
                     </form>
                 </td>
                 <td colspan=2>
                     <form action="../db/delete.php" Method="POST">
                         <input type="hidden" name="id" value="<?php echo $value['id'] ?>">
-                        <input class="button" type="submit" value="Delete">
+                        <input class="button alert-danger " type="submit" value="Delete">
                     </form>
                 </td>
             </tr>

@@ -13,10 +13,10 @@ include 'templates/header.php';
             3.Le Chrono se lance dès le lancement du jeu.
         <form action="db/data.php" method="POST"> 
             <label for="name"></label>
-            <input type="text" placeholder="Votre pseudo" name="name" require>
+            <input type="text"  class="form-control" placeholder="Username..." name="name" require>
 
             <label for="password"></label>
-            <input type="password" placeholder="Votre mot de passe..." name="password" require>
+            <input type="password" class="form-control" placeholder="Password..." name="password" require>
             <input class="button" type="submit" value="Jouer">
 
         </form>
