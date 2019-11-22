@@ -16,7 +16,7 @@ admin/adminUser.php - Contient le READ des USERS dans un tableau avec associatio
 db/data.php - Contient le système de vérification, de récupération et d'éxécution de la requête de lancement
 db/read_highscore.php - Contient la page résultat du gamer avec affichage du score, récupération des dix meilleurs résultats en fonction du temps observé et possibilité de relancer une nouvelle partie.
 db/updateUser.php - fonction Update côté gamer.
-db/dbConnexion - fonction de connexion à la database, possibilité de changer le username et le password sur l'ensemble des pages.
+db/dbConnexion - fonction de connexion à la database, possibilité de changer le username et le password de la Database sur l'ensemble des pages.
 Prérequis /Environnement
 Créer la data base avec le fichier MemoryDex_test.sql
 Si vous excecuter le script dans MysqlWorkbench ou PhpMyAdmin vous pourrez créer la database nécessaire
@@ -28,6 +28,8 @@ Inscription obligatoire.
 Identifiants profil administrateur 
 Login : admin
 Password : 0000
+
++ db/dbConnexion - fonction de connexion à la database, possibilité de changer le username et le password de la Database sur l'ensemble des pages.
 
 Identifiants profil utilisateur
 A renseigner depuis le formulaire d'inscription pour intégration dans la base de données
