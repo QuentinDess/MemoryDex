@@ -1,12 +1,9 @@
 <?php
 
-
-$dbuser = 'root';
-$dbpass = '000000';
 $userRole = 2;
 
 // Initialiser une connexion à notre DB (DataBase)
-$dbConnection = new PDO('mysql:host=localhost;dbname=MemoryDex', $dbuser, $dbpass);
+include 'dbconnexion.php';
 
  /*echo password_hash($_POST['password'], PASSWORD_DEFAULT);*/
 

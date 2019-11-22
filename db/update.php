@@ -4,10 +4,8 @@ include '../security/security_admin.php';
 // Mise à jour du USER 
 // Récupère l'ID 
 try {
-$dbUser = 'root';
-$dbPass = '000000';
 // Connection with db
-$dbConnection = new PDO('mysql:host=localhost;dbname=MemoryDex', $dbUser, $dbPass);
+include 'dbconnexion.php';
 // Check username and password 
 $dbQuery = "SELECT id, name, password FROM Users WHERE id = :id";
 // Préparation de la requête 
@@ -38,10 +36,8 @@ $data = $dbCheck->fetch(PDO::FETCH_ASSOC);
 <?php
 if (isset($_POST['name']) && !empty($_POST['name']) && isset($_POST['password']) && !empty($_POST['password'])) {
     try {
-        $dbUser = 'root';
-        $dbPass = '000000';
         // Connection with db
-        $dbConnection = new PDO('mysql:host=localhost;dbname=MemoryDex', $dbUser, $dbPass);
+        include 'dbconnexion.php';
         // Check username and password 
         $dbQuery = "UPDATE Users SET name = :name, password = :password WHERE id = :id";
         // Préparation de la requête 

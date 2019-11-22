@@ -4,13 +4,15 @@ include '../templates/header_File.php';
 
 // Récupère l'ID 
 try {
-$dbUser = 'root';
-$dbPass = '000000';
 // Connection with db
-$dbConnection = new PDO('mysql:host=localhost;dbname=MemoryDex', $dbUser, $dbPass);
-// Check username and password 
-$dbQuery = "DELETE FROM Users WHERE id = :id";
+include 'dbconnexion.php';
+// Envoyer la requête de supprimer les id game 
+$dbQuery1= "DELETE  FROM Game where id_Users =:id ";
+$dbCheck1 = $dbConnection->prepare($dbQuery1);
+$dbCheck1->bindParam(':id', $_POST['id']);
+$dbCheck1->execute();
 
+$dbQuery = "DELETE FROM Users WHERE id = :id";
 // Préparation de la requête suppression
 $dbCheck = $dbConnection->prepare($dbQuery);
 // Récupere les informations cachées 

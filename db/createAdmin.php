@@ -1,6 +1,4 @@
 <?php
-$dbuser = 'root';
-$dbpass = '000000';
 
 if ($_POST['userRole'] == 'gamer') {
     $_POST['userRole'] = 2;
@@ -9,7 +7,7 @@ if ($_POST['userRole'] == 'gamer') {
 }
 
 // Initialiser une connexion à notre DB (DataBase)
-$dbConnection = new PDO('mysql:host=localhost;dbname=MemoryDex', $dbuser, $dbpass);
+include 'dbconnexion.php';
 /*echo password_hash($_POST['password'], PASSWORD_DEFAULT);*/
 // $db = "INSERT INTO User(name, password) VALUES (':name', ':password')";
 $db = "INSERT INTO Users(name, password, id_Roles) VALUES (:name, :password, :userRole);";

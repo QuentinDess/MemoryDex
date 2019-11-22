@@ -1,14 +1,13 @@
 <?php
 session_start();
 
-$dbUser = 'root';
-$dbPass = '000000';
+
 // Check connection
 if (isset($_POST) && !empty ($_POST)) {
     if (isset($_POST["name"]) && !empty ($_POST["name"]) && isset($_POST["password"]) && !empty($_POST["password"])) {
-        // Connection with db
         try {
-        $dbConnection = new PDO('mysql:host=localhost;dbname=MemoryDex', $dbUser, $dbPass);
+        // connection à la db    
+            include 'dbconnexion.php';
         // Check username and password 
         $dbQuery = "SELECT * FROM Users WHERE Users.name = :name AND Users.password = :password";
         // Préparation de la requête 
