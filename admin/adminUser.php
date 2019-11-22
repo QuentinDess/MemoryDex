@@ -3,14 +3,6 @@ include '../templates/header_File.php';
 
 include '../security/security_admin.php';
 // Création USERS
-
-// READ des USERS dans un tableau avec association de la commande pour UPDATE ou DELETE 
-
-?>
-
-
-<?php
-// Création USERS
 ?>
 <div>
     
@@ -32,11 +24,8 @@ include '../security/security_admin.php';
 <?php
 // READ des USERS dans un tableau avec association de la commande pour UPDATE ou DELETE
 try { 
-
-$dbUser = 'root';
-$dbPass = '000000';
-// Connection with db
-$dbConnection = new PDO('mysql:host=localhost;dbname=MemoryDex', $dbUser, $dbPass);
+// Connexion à la DB
+include 'dbconnexion.php';
 // Check username and password 
 $dbQuery = "SELECT id, name, password, id_Roles FROM Users ORDER BY id ASC";
 // Préparation de la requête 
