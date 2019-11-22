@@ -30,35 +30,15 @@ function chrono(){
     
      span[0].innerHTML=mn+" min";
      if(s <= 9){
-    span[1].innerHTML="0"+s+" s";
+    span[1].innerHTML=": 0"+s+" s";
      }
     else{
-     span[1].innerHTML=s+" s";
+     span[1].innerHTML=":"+ s+" s";
     }
 
 };
 //démarre mon chronomètre au chargment de la page
 
 document.addEventListener("onload", start());
-
-
-
-// lors du dernier click sur le bon boutton
-// document.querySelector("button").addEventListener("click", function(){
-//   clearInterval(t);
-//   // creer un form
-//   let formEltChrono = document.createElement("form");
-//   // formEltChrono.setAttribute("methode="POST", action="envoi vers la page du create bdd pour Game);
-//   //formEltChrono.classList.add("none") ==> je ne veux pas qu'on le voit
-//   document.querySelector("main").appendChild(formEltChrono);
-//   //cree mon input pour inserer la valeur du chron
-//   let inputEltChrono=document.createElement("input");
-//   //inputEltChrono.setAttribute("type=text");
-//   inputEltChrono.innerHTML= Number(s)+ (Number(mn)*60)
-//   formEltChrono.appendChild(inputEltChrono);
-//   //je submit mon form grace à une méthode qui submit directement 
-
-//   formEltChrono.submit();
-// })
 
 
