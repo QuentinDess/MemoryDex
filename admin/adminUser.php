@@ -25,7 +25,7 @@ include '../security/security_admin.php';
 // READ des USERS dans un tableau avec association de la commande pour UPDATE ou DELETE
 try { 
 // Connexion à la DB
-include 'dbconnexion.php';
+include '../db/dbconnexion.php';
 // Check username and password 
 $dbQuery = "SELECT id, name, password, id_Roles FROM Users ORDER BY id ASC";
 // Préparation de la requête 
