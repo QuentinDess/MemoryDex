@@ -1,22 +1,15 @@
 <?php
 include '../templates/header_File.php';
 include '../security/security_gamer.php';
-// Mise à jour du USER 
-
-// Récupère l'ID 
 try {
-// Connection with db
+// Connexion à la DB
 include 'dbconnexion.php';
-// Check username and password 
+// Requête SQL
 $dbQuery = "SELECT id, name, password FROM Users WHERE id = :id";
-
 // Préparation de la requête 
 $dbCheck = $dbConnection->prepare($dbQuery);
 // Exécuter la requête 
-
 $dbCheck->bindParam(':id', $_POST['id']);
-
-
 $dbCheck->execute();
 // Récupérer le résultat de la requête
 $data = $dbCheck->fetch(PDO::FETCH_ASSOC);
@@ -26,6 +19,7 @@ $data = $dbCheck->fetch(PDO::FETCH_ASSOC);
 }
 
 ?>
+<!-- Formulaire pré-rempli des informations, enregistre systématiquement les informations -->
 <div class="update_container">
 <h2>Edit Login</h2>
 <form  class="update_form" action="updateUser.php" method="POST"> 
@@ -44,19 +38,16 @@ $data = $dbCheck->fetch(PDO::FETCH_ASSOC);
 
 if (isset($_POST['name']) && !empty($_POST['name']) && isset($_POST['password']) && !empty($_POST['password'])) {
     try {
-        // Connection with db
+        // Connexion à la DB
         include 'dbconnexion.php';
-        // Check username and password 
+        // Requête SQL
         $dbQuery = "UPDATE Users SET name = :name, password = :password WHERE id = :id";
-
         // Préparation de la requête 
         $dbCheck = $dbConnection->prepare($dbQuery);
         // Exécuter la requête 
-
         $dbCheck->bindParam(':id', $_POST['id']);
         $dbCheck->bindParam(':name', $_POST['name']);
         $dbCheck->bindParam(':password', $_POST['password']);
-
         $dbCheck->execute();
         // Récupérer le résultat de la requête
         $data = $dbCheck->fetch(PDO::FETCH_ASSOC);
