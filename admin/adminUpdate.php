@@ -5,7 +5,7 @@ include '../templates/header_File.php';
 include '../security/security_admin.php';
 
 ?>
-<-- Mise à jour du USER -->
+<!-- Mise à jour du USER -->
 
 <form action="../db/update.php" method="POST"> 
     <h2>Edit Login</h2>
