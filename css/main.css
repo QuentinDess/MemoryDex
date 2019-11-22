@@ -5,29 +5,16 @@
 
 
 body{
-    background-image: url(background_File.jpg);
+    background-color: black!important;
     margin:0;
     padding:0;
+    height: 100vh;
 }
 
 
-.container{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    height: 50%;
-    width: 50%;
-
-    transform: translate(-50%, -50%);
-    background: rgba(255, 255, 255, 0.199);
-}
 
 .button2{
     width: 50%;
-    margin: 40%;
     border-radius:12px 0 12px 0;
 	background: #2c8021c4;
 	border:none;
@@ -43,7 +30,8 @@ body{
     height: 100%;
     width: 95%;
     padding: 15%;
-    background-color: rgba(255, 192, 203, 0);
+    margin-top: 5%;
+    background-color: rgba(255, 192, 203, 0.199);
 }
 
 /*form sign up*/
@@ -62,248 +50,64 @@ div#form {
 }
 /* style de la page de jeu */
 
+.level {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: auto;
+    align-content: start;
+    height: 750px;
+    width: 750px;
+    /*en dessous de 800px mettre 500px*/
+    margin: auto;
+  }
 
-.level { 
-    display: grid; 
-    grid-template-columns: repeat(4, 1fr); 
-    grid-template-rows: repeat(4, 1fr); 
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    border: black solid 1px;
-    height: 30%;
-    width:50%; 
-    margin:auto;
-    }
-    
-.div1 {
-    grid-area: 1 / 1 / 2 / 2;
-    border-right: black solid 1px; 
-    border-bottom: black solid 1px;    
-} 
-.div2 { grid-area: 1 / 2 / 2 / 3;
-    border-right: black solid 1px;
-    border-bottom: black solid 1px;      } 
-.div3 { grid-area: 1 / 3 / 2 / 4;
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px; } 
-.div4 { grid-area: 1 / 4 / 2 / 5; 
-    border-bottom: black solid 1px;} 
-.div5 { grid-area: 2 / 4 / 3 / 5; 
-         
-    border-bottom: black solid 1px;} 
-.div6 { grid-area: 2 / 3 / 3 / 4;
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px; } 
-.div7 { grid-area: 2 / 2 / 3 / 3; 
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px;} 
-.div8 { grid-area: 2 / 1 / 3 / 2;
-    border-bottom: black solid 1px;
-    border-right: black solid 1px; } 
-.div9 { grid-area: 3 / 1 / 4 / 2; 
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px;} 
-.div10 { grid-area: 3 / 2 / 4 / 3; 
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px;} 
-.div11 { grid-area: 3 / 3 / 4 / 4; 
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px;} 
-.div12 { grid-area: 3 / 4 / 4 / 5;
-    border-bottom: black solid 1px; 
-    } 
-.div13 { grid-area: 4 / 4 / 5 / 5;
-     } 
-.div14 { grid-area: 4 / 3 / 5 / 4;
-    border-right: black solid 1px; } 
-.div15 { grid-area: 4 / 2 / 5 / 3;
-    border-right: black solid 1px; } 
-.div16 { grid-area: 4 / 1 / 5 / 2; 
-    border-right: black solid 1px; } 
-.div_sala1 {
-    grid-area: 1 / 1 / 2 / 2;
-    border-right: black solid 1px; 
-    border-bottom: black solid 1px;    
-} 
-.div_sala2 { grid-area: 1 / 2 / 2 / 3;
-    border-right: black solid 1px;
-    border-bottom: black solid 1px;      } 
-.div_sala3 { grid-area: 1 / 3 / 2 / 4;
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px; } 
-.div_sala4 { grid-area: 1 / 4 / 2 / 5; 
-    border-bottom: black solid 1px;} 
-.div_sala5 { grid-area: 2 / 4 / 3 / 5; 
-            
-    border-bottom: black solid 1px;} 
-.div_sala6 { grid-area: 2 / 3 / 3 / 4;
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px; } 
-.div_sala7 { grid-area: 2 / 2 / 3 / 3; 
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px;} 
-.div_sala8 { grid-area: 2 / 1 / 3 / 2;
-    border-bottom: black solid 1px;
-    border-right: black solid 1px; } 
-.div_sala9 { grid-area: 3 / 1 / 4 / 2; 
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px;} 
-.div_sala10 { grid-area: 3 / 2 / 4 / 3; 
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px;} 
-.div_sala11 { grid-area: 3 / 3 / 4 / 4; 
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px;} 
-.div_sala12 { grid-area: 3 / 4 / 4 / 5;
-    border-bottom: black solid 1px; 
-    } 
-.div_sala13 { grid-area: 4 / 4 / 5 / 5;
-        } 
-.div_sala14 { grid-area: 4 / 3 / 5 / 4;
-    border-right: black solid 1px; } 
-.div_sala15 { grid-area: 4 / 2 / 5 / 3;
-    border-right: black solid 1px; } 
-.div_sala16 { grid-area: 4 / 1 / 5 / 2; 
-    border-right: black solid 1px; } 
-.div_cara1 {
-    grid-area: 1 / 1 / 2 / 2;
-    border-right: black solid 1px; 
-    border-bottom: black solid 1px;    
-} 
-.div_cara2 { grid-area: 1 / 2 / 2 / 3;
-    border-right: black solid 1px;
-    border-bottom: black solid 1px;      } 
-.div_cara3 { grid-area: 1 / 3 / 2 / 4;
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px; } 
-.div_cara4 { grid-area: 1 / 4 / 2 / 5; 
-    border-bottom: black solid 1px;} 
-.div_cara5 { grid-area: 2 / 4 / 3 / 5; 
-            
-    border-bottom: black solid 1px;} 
-.div_cara6 { grid-area: 2 / 3 / 3 / 4;
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px; } 
-.div_cara7 { grid-area: 2 / 2 / 3 / 3; 
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px;} 
-.div_cara8 { grid-area: 2 / 1 / 3 / 2;
-    border-bottom: black solid 1px;
-    border-right: black solid 1px; } 
-.div_cara9 { grid-area: 3 / 1 / 4 / 2; 
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px;} 
-.div_cara10 { grid-area: 3 / 2 / 4 / 3; 
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px;} 
-.div_cara11 { grid-area: 3 / 3 / 4 / 4; 
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px;} 
-.div_cara12 { grid-area: 3 / 4 / 4 / 5;
-    border-bottom: black solid 1px; 
-    } 
-.div_cara13 { grid-area: 4 / 4 / 5 / 5;
-        } 
-.div_cara14 { grid-area: 4 / 3 / 5 / 4;
-    border-right: black solid 1px; } 
-.div_cara15 { grid-area: 4 / 2 / 5 / 3;
-    border-right: black solid 1px; } 
-.div_cara16 { grid-area: 4 / 1 / 5 / 2; 
-    border-right: black solid 1px; } 
-.div_bulbi1 {
-    grid-area: 1 / 1 / 2 / 2;
-    border-right: black solid 1px; 
-    border-bottom: black solid 1px;    
-} 
-.div_bulbi2 { grid-area: 1 / 2 / 2 / 3;
-    border-right: black solid 1px;
-    border-bottom: black solid 1px;      } 
-.div_bulbi3 { grid-area: 1 / 3 / 2 / 4;
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px; } 
-.div_bulbi4 { grid-area: 1 / 4 / 2 / 5; 
-    border-bottom: black solid 1px;} 
-.div_bulbi5 { grid-area: 2 / 4 / 3 / 5; 
-            
-    border-bottom: black solid 1px;} 
-.div_bulbi6 { grid-area: 2 / 3 / 3 / 4;
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px; } 
-.div_bulbi7 { grid-area: 2 / 2 / 3 / 3; 
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px;} 
-.div_bulbi8 { grid-area: 2 / 1 / 3 / 2;
-    border-bottom: black solid 1px;
-    border-right: black solid 1px; } 
-.div_bulbi9 { grid-area: 3 / 1 / 4 / 2; 
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px;} 
-.div_bulbi10 { grid-area: 3 / 2 / 4 / 3; 
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px;} 
-.div_bulbi11 { grid-area: 3 / 3 / 4 / 4; 
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px;} 
-.div_bulbi12 { grid-area: 3 / 4 / 4 / 5;
-    border-bottom: black solid 1px; 
-    } 
-.div_bulbi13 { grid-area: 4 / 4 / 5 / 5;
-        } 
-.div_bulbi14 { grid-area: 4 / 3 / 5 / 4;
-    border-right: black solid 1px; } 
-.div_bulbi15 { grid-area: 4 / 2 / 5 / 3;
-    border-right: black solid 1px; } 
-.div_bulbi16 { grid-area: 4 / 1 / 5 / 2; 
-    border-right: black solid 1px; }
-.div_melo1 {
-    grid-area: 1 / 1 / 2 / 2;
-    border-right: black solid 1px; 
-    border-bottom: black solid 1px;    
-} 
-.div_melo2 { grid-area: 1 / 2 / 2 / 3;
-    border-right: black solid 1px;
-    border-bottom: black solid 1px;      } 
-.div_melo3 { grid-area: 1 / 3 / 2 / 4;
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px; } 
-.div_melo4 { grid-area: 1 / 4 / 2 / 5; 
-    border-bottom: black solid 1px;} 
-.div_melo5 { grid-area: 2 / 4 / 3 / 5; 
-            
-    border-bottom: black solid 1px;} 
-.div_melo6 { grid-area: 2 / 3 / 3 / 4;
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px; } 
-.div_melo7 { grid-area: 2 / 2 / 3 / 3; 
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px;} 
-.div_melo8 { grid-area: 2 / 1 / 3 / 2;
-    border-bottom: black solid 1px;
-    border-right: black solid 1px; } 
-.div_melo9 { grid-area: 3 / 1 / 4 / 2; 
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px;} 
-.div_melo10 { grid-area: 3 / 2 / 4 / 3; 
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px;} 
-.div_melo11 { grid-area: 3 / 3 / 4 / 4; 
-    border-right: black solid 1px;     
-    border-bottom: black solid 1px;} 
-.div_melo12 { grid-area: 3 / 4 / 4 / 5;
-    border-bottom: black solid 1px; 
-    } 
-.div_melo13 { grid-area: 4 / 4 / 5 / 5;
-        } 
-.div_melo14 { grid-area: 4 / 3 / 5 / 4;
-    border-right: black solid 1px; } 
-.div_melo15 { grid-area: 4 / 2 / 5 / 3;
-    border-right: black solid 1px; } 
-.div_melo16 { grid-area: 4 / 1 / 5 / 2; 
-    border-right: black solid 1px; }      
+  .sprite_pika {
+    flex: 0 0 auto;
+    margin: 0px;
+    height: 25%;
+    width: 25%;
+    border:solid white 1px;
+
+  }
+  .sprite_sala {
+    flex: 0 0 auto;
+    margin: 0px;
+    height: 25%;
+    width: 25%;
+    border:solid white 1px;
+  }
+  .sprite_cara {
+    flex: 0 0 auto;
+    margin: 0px;
+    height: 25%;
+    width: 25%;
+    border:solid white 1px;
+  }
+
+  .sprite_bulbi {
+    flex: 0 0 auto;
+    margin: 0px;
+    height: 25%;
+    width: 25%;
+    border:solid white 1px;
+  }
+
+  .sprite_melo {
+    flex: 0 0 auto;
+    margin: 0px;
+    height: 25%;
+    width: 25%;
+    border:solid white 1px;
+  }
+
+
 img{
     height: 100%;
     width: 100%;
 }
+
 .opacity{
     opacity: 0;
 }
@@ -312,12 +116,235 @@ img{
 }
 
 .MsgLvl{
-    width: 20%;
-    height:20%;
+        width: 30%;
+    height: 25%;
     position: absolute;
-    left: 40%;
-    top:40%;
+    left: 35%;
+    top: 40%;
     margin: auto;
-    background:blue;
+    background:#2c8021;
+    color:#fff;
+    border-radius: 5%;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 2em;
 } 
 
+.banner{
+    background: url('banner.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60%;
+
+}
+header{
+display: flex!important;
+height: 10%;
+}
+nav{
+    width: 40%;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3%!important;
+
+}
+li{
+    height: 80% !important;
+    list-style: none;
+}
+a{
+    text-decoration: none!important;
+    color: #498d40!important;
+    height: 100%;
+    width: 100%;
+    
+}
+a:hover{
+    color:white!important;
+}
+
+
+.start_game{
+    width: 50%;
+    height: 40px;
+    margin: 4%;
+    border-radius:12px 0 12px 0;
+	background: #2c8021c4;
+	border:none;
+	color:#fff;
+	font:bold 12px Verdana;
+} 
+
+
+/*High score && crudGamer && adminUser*/
+
+h1 {
+    color :  #2c8021;
+}
+h2{
+    color :  #2c8021;
+}
+
+td {
+    color: white;
+}
+
+.button {
+    border-radius: 2px;
+    background-color: #1d1b1b;
+    border-top-color: rgba(255, 255, 255, 0.644);
+    border-radius: 6%;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 0px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+  }
+
+  .button:hover{
+      background-color: #2c8021;
+  }
+
+#table {
+    display: table;
+     width: 100%; 
+     background: rgb(20, 20, 20);
+     margin: 0;
+     margin-top: 2%;
+     margin-bottom: 5%;
+     box-sizing: border-box;
+
+ }
+
+.caption {
+     display: block;
+     width: 100%;
+     background: #7e857d21;
+     padding-left: 5px;
+     color: #fff;
+     font-size: 20px;
+     line-height: 20px;
+     text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+     box-sizing: border-box;
+ }
+
+
+.header-row {
+     background: #8b8b8b;
+     color: #fff;
+
+ }
+
+.row {
+    display: table-row;
+}
+.adminuser_container{
+    width:80%;
+  
+    color: #fff;
+  
+    background-color: rgba(255, 192, 203, 0.199);
+    margin-left: 10%;
+    margin-bottom: 5%;
+    padding: 2%;
+    
+}
+#table{
+    margin-right: 5%!important;
+    margin-left: 5%!important;
+    width: 90%!important;
+}
+.create_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #fff;
+    width:60%;
+    background-color: rgba(255, 192, 203, 0.199);
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-bottom: 5%;
+    padding: 2%;
+}
+.update_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-top: 15%;
+    background-color: rgba(255, 192, 203, 0.199);
+    width: 60%;
+    margin-left: 20%;
+}
+.update_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5%;
+    color: #fff;
+}
+
+.update_input{
+
+margin-top: 10%;
+}
+.button3{
+    margin-top: 5%;
+    margin-left: 25%;
+}
+.game_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 10%;
+}
+.chronometre{
+    text-align: center;
+    margin-bottom: 3%;
+    text-align: center;
+    margin-bottom: 3%;
+    display: flex;
+    justify-content: center;
+
+}
+span{
+    color:#fff;
+    font-size: 2.5em;
+    margin-left: 2%;
+}
+.highscore_container{
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.crudgamer_container{
+    margin-top: 10%;
+}
+@media screen and (max-width: 800px){
+    .crudgamer_container{
+        margin-top: 40%;
+    }
+}
+@media screen and (max-width: 419px){
+   button {
+    width: 72px!important;
+    height: 54px!important;
+   }
+   .level {
+    height: 350px;
+    width: 350px;
+}
+}
+@media screen and (min-height: 800px)  {
+    .level {
+        height: 450px;
+        width: 450px;
+    }
+}

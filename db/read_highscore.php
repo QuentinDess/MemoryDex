@@ -1,8 +1,5 @@
 <?php
-$dbUser="root";
-$dbPass="000000";
-
-$dbConnection = new PDO('mysql:host=localhost;dbname=MemoryDex', $dbUser, $dbPass);
+include 'dbconnexion.php';
 
 $dbQuery = "SELECT score, name from Game, Users where Game.id_Users=Users.id and Users.id like :id_session_users order by score limit 10;";
 $dbQuery2= "SELECT score, name from Game, Users where Game.id_Users=Users.id order by score limit 10;";
