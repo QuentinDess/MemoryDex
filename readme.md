@@ -25,7 +25,7 @@ Prérequis / Authentification
 Inscription obligatoire.
 
 
-Identifiants profil administrateur 
++ Identifiants profil administrateur 
 Login : admin
 Password : 0000
 
