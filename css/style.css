@@ -1,4 +1,4 @@
-
+/* voici le css lié à la page d'index*/
 *{
     margin:0;
     padding:0;
@@ -33,17 +33,7 @@ form{
     top:80%;
 }
 
-@media screen and (min-width: 200px) and (max-width: 640px) {
-    #test {
-        width: 100px;
-        background-size: contain;
-    }
-}
-@media (min-width: 768px){
-.container {
-   
-    margin-top: 10%;
-}
+
 }
 main{
     margin-bottom: 12%;
@@ -145,6 +135,7 @@ a:hover{
     height: 10%;
     width: 10%;
 }
+/*voici le css lié au responsive */
 @media screen and (max-width: 419px){
     button{
      width: 72px!important;
@@ -157,4 +148,15 @@ a:hover{
         height: 450px;
         width: 450px;
     }
+}
+@media screen and (min-width: 200px) and (max-width: 640px) {
+    #test {
+        width: 100px;
+        background-size: contain;
+    }
+}
+@media (min-width: 768px){
+.container {
+   
+    margin-top: 10%;
 }
