@@ -1,10 +1,8 @@
 
-//pour savoir si je cible le pokemon 
-// if (document.target.queryselectorAll(good image) or document.target.length = 1)
-// ==> ca voudrat dire que si je cible la bonne image  ou la seule image qui n'a que un de longueur)
+// Je crée une variable pour cibler plus facilement un array
  let divPikaElt= document.querySelectorAll(".sprite_pika");
  
-// console.log(divPikaElt);
+// j'attribut une image (ici de pichu) à chaque div ayant la classe "sprite pika"
 divPikaElt.forEach(element =>{ 
    
         let img=document.createElement("img");
@@ -15,10 +13,12 @@ divPikaElt.forEach(element =>{
     
     
     });
-
+//je prépare l'image différente des autre 
 let img2=document.createElement("img");
+// je lui met une classe différente pour actionner la fin du niveau si on click dessus
 img2.setAttribute("class", "good_guess");
 img2.src="../image/image_pika/image1.png";
+//je cible une de mes div au hasard ;
 let special_div=document.querySelector(` .div${ Math.floor(Math.random() * (16-1) + 1 )}`);
 special_div.replaceChild(img2, special_div.childNodes[1]);
 //compteur avant de faire disparaitre les img
@@ -129,8 +129,6 @@ document.querySelector(".good_guess1").addEventListener("click", function(){
         
 })
 
-////////////
-//////////////
 //3eme niveau
 
 let divCaraElt= document.querySelectorAll(".sprite_cara");
@@ -181,7 +179,7 @@ document.querySelector(".good_guess3").addEventListener("click", function(){
     })}, 3500);
     
   
-           
+//4eme niveau         
             
 })
       
@@ -232,6 +230,7 @@ document.querySelector(".good_guess4").addEventListener("click", function(){
     })}, 3500);   
               
 });
+//Dernier niveau
       
 let divMeloElt= document.querySelectorAll(".sprite_melo");
  
@@ -267,7 +266,6 @@ document.querySelector(".good_guess5").addEventListener("click", function(){
     document.querySelector(".good_guess5").classList.remove("opacity");
     document.querySelector(".good_guess5").parentElement.style.background="green";
     setTimeout(function(){
-        alert("vous avez terminé le mini-jeu");
         clearInterval(t);
         // creer un form
         let formEltChrono = document.createElement("form");
@@ -281,9 +279,8 @@ document.querySelector(".good_guess5").addEventListener("click", function(){
         inputEltChrono.setAttribute("name","score");
         inputEltChrono.value= Number(s)+ (Number(mn)*60)
         formEltChrono.appendChild(inputEltChrono);
-        debugger;
         //je submit mon form grace à une méthode qui submit directement 
-        formEltChrono.submit();},3000);               
+        formEltChrono.submit();},1000);               
 });
 
 
