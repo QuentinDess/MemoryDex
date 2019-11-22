@@ -2,6 +2,9 @@
 include '../templates/header_File.php';
 include '../security/security_gamer.php';
 include '../db/read_highscore.php';
+// Sur cette page je crée en premier un tableau des meilleurs score de l'utilisateur 
+// Puis un deuxième avec meilleurs scores multi
+//J'utilise la page read_highscore.php pour cela
 ?>
 <div class ="highscore_container">
     <div class ="caption">
@@ -45,7 +48,9 @@ include '../db/read_highscore.php';
                     ?>
             </tbody>
             </table>
-        </div>    
-        <button class="start_game button3" ><a href="../gamer/game.php">Play Again</a>
+        </div>
+    <form action="../gamer/game.php">
+    <button class="start_game button3" >Play again</button>
+    </form>
 </main>
 
