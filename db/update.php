@@ -1,12 +1,10 @@
 <?php
 include '../templates/header_File.php';
 include '../security/security_admin.php';
-// Mise à jour du USER 
-// Récupère l'ID 
 try {
-// Connection with db
+// Connexion with db
 include 'dbconnexion.php';
-// Check username and password 
+// Requête SQL 
 $dbQuery = "SELECT id, name, password FROM Users WHERE id = :id";
 // Préparation de la requête 
 $dbCheck = $dbConnection->prepare($dbQuery);
@@ -20,7 +18,8 @@ $data = $dbCheck->fetch(PDO::FETCH_ASSOC);
     die;
 }
 ?>
-
+<!-- Formulaire pré-rempli d'identifiant de compte, enregistre les informations inscrites --> 
+    
 <form action="update.php" method="POST"> 
     <input type="hidden" name="id" value="<?php echo $data['id'] ?>">
 
@@ -36,9 +35,9 @@ $data = $dbCheck->fetch(PDO::FETCH_ASSOC);
 <?php
 if (isset($_POST['name']) && !empty($_POST['name']) && isset($_POST['password']) && !empty($_POST['password'])) {
     try {
-        // Connection with db
+        // Connexion à la DB
         include 'dbconnexion.php';
-        // Check username and password 
+        // Requête SQL
         $dbQuery = "UPDATE Users SET name = :name, password = :password WHERE id = :id";
         // Préparation de la requête 
         $dbCheck = $dbConnection->prepare($dbQuery);
