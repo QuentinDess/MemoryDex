@@ -6,7 +6,7 @@ include '../security/security_gamer.php';
 // Récupère l'ID 
 try {
 $dbUser = 'root';
-$dbPass = '';
+$dbPass = '000000';
 // Connection with db
 $dbConnection = new PDO('mysql:host=localhost;dbname=MemoryDex', $dbUser, $dbPass);
 // Check username and password 
@@ -29,6 +29,7 @@ $data = $dbCheck->fetch(PDO::FETCH_ASSOC);
 
 ?>
 <div class="update_container">
+<h2>Vous pouvez modifier vos login</h2>
 <form  class="update_form" action="updateUser.php" method="POST"> 
     <input type="hidden" name="id" value="<?php echo $data['id'] ?>">
 
@@ -46,7 +47,7 @@ $data = $dbCheck->fetch(PDO::FETCH_ASSOC);
 if (isset($_POST['name']) && !empty($_POST['name']) && isset($_POST['password']) && !empty($_POST['password'])) {
     try {
         $dbUser = 'root';
-        $dbPass = '';
+        $dbPass = '000000';
         // Connection with db
         $dbConnection = new PDO('mysql:host=localhost;dbname=MemoryDex', $dbUser, $dbPass);
         // Check username and password 
@@ -65,9 +66,9 @@ if (isset($_POST['name']) && !empty($_POST['name']) && isset($_POST['password'])
         $data = $dbCheck->fetch(PDO::FETCH_ASSOC);
 
     } catch (PDOException $e ) {
-        echo "Erreur !: $e->getMessage()";
+        echo "Erreur !: $e->getMessage(erreur connexion db)";
         die;
     }
-
+    
     header('location: ../gamer/crudGamer.php');
 }

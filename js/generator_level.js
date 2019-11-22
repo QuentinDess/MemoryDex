@@ -51,8 +51,13 @@ document.querySelector(".good_guess").addEventListener("click", function(){
     let messgEndLevel= document.createElement("div");
     messgEndLevel.classList.add("MsgLvl");
     //mettre un Z index devant le reste
-    messgEndLevel.innerHTML="Fin du Niveau";
-    document.querySelector("body").appendChild(messgEndLevel);
+    document.querySelector(".level_container").appendChild(messgEndLevel);
+    let p_Msg_lvl=document.createElement("p");
+    p_Msg_lvl.setAttribute("class", "p_Msg_lvl");
+    p_Msg_lvl.style.marginTop="15%";
+    p_Msg_lvl.style.color="#fff";
+    p_Msg_lvl.innerHTML="Fin du Niveau";
+    messgEndLevel.appendChild(p_Msg_lvl);
     setTimeout(function(){
         document.querySelector(".pika").classList.add("none");
         document.querySelector(".sala").classList.remove("none");

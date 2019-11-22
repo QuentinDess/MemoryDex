@@ -2,7 +2,7 @@
 
 
 $dbuser = 'root';
-$dbpass = '';
+$dbpass = '000000';
 $userRole = 2;
 
 // Initialiser une connexion à notre DB (DataBase)

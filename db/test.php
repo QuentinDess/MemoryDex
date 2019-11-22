@@ -5,7 +5,7 @@ session_start();
 var_dump($_SESSION);
 var_dump($_GET);
 $dbUser = 'root';
-$dbPass = '';
+$dbPass = '000000';
 // Check connection
 if (isset($_GET) && !empty ($_GET)) {
     if (isset($_GET["score"]) && !empty ($_GET["score"]) ) {

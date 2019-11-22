@@ -3,7 +3,7 @@ include '../templates/header_File.php';
 include '../security/security_gamer.php';
 include '../db/read_highscore.php';
 ?>
-<div class ="container">
+<div class ="highscore_container">
     <div class ="caption">
         <h1>Votre score</h1>
         <table id="table">

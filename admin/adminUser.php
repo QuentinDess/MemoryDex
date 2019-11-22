@@ -33,7 +33,7 @@ include '../security/security_admin.php';
 try { 
 
 $dbUser = 'root';
-$dbPass = '';
+$dbPass = '000000';
 // Connection with db
 $dbConnection = new PDO('mysql:host=localhost;dbname=MemoryDex', $dbUser, $dbPass);
 // Check username and password 

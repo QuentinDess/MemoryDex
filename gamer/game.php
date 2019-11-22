@@ -2,12 +2,14 @@
 include '../templates/header_File.php';
 include '../security/security_gamer.php';
 ?>
-
-<main>        
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<div class="game_container">        
         <div class="chronometre">
-                <span >0 min</span> :
-                <span >0 s</span> 
+                <i class="fas fa-stopwatch"  style='font-size:55px;color:white'></i>
+                <span >0 min </span> 
+                <span > 0 s</span> 
         </div>
+        <div class="level_container">
         <div class="level pika">
                 <div class="sprite_pika div1">  </div> 
                 <div class="sprite_pika div2">   </div> 
@@ -98,6 +100,8 @@ include '../security/security_gamer.php';
                 <div class="sprite_melo div_melo15"> </div> 
                 <div class="sprite_melo div_melo16"> </div>
         </div>
+        </div>
+</div>  
 </main>        
 <script src="../js/chrono.js"></script>
 <script src="../js/generator_level.js"></script>

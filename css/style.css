@@ -9,7 +9,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items:flex-start;
+    align-items:center;
     background-image: url(background_index.jpg);
     background-position: center;
     background-repeat: no-repeat; 
@@ -41,15 +41,19 @@ form{
 }
 @media (min-width: 768px){
 .container {
-    width: 75%!important;
-    margin-top: 4%;
+   
+    margin-top: 10%;
 }
+}
+main{
+    margin-bottom: 12%;
 }
 .container{
     margin:0!important;
     padding: 0!important;
     margin-left: 2%!important;
     margin-bottom: 2%!important;
+    margin-top: 10%!important;
     display: flex;
     /*z-index: 1;*/
     justify-content: center;
@@ -95,7 +99,7 @@ form{
 header{
 display: flex!important;
 height: 10%;
-width:100%
+width:100%;
 }
 nav{
     width: 40%;
@@ -141,4 +145,16 @@ a:hover{
     height: 10%;
     width: 10%;
 }
-
+@media screen and (max-width: 419px){
+    button{
+     width: 72px!important;
+     height: 54px!important;
+    }
+   
+ }
+ @media screen and (min-height: 800px)  {
+    .level {
+        height: 450px;
+        width: 450px;
+    }
+}

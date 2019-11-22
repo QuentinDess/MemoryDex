@@ -26,7 +26,7 @@ session_start();
                     if ($_SESSION['id_Roles'] == 1 ) {
                         ?> 
                         <li>
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="admin/adminUser.php"> <?php echo $_SESSION['name']; ?> </a>
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="admin/adminUser.php"> ADMIN </a>
                         </li>  
                         <li>
                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="../db/logout.php"> Log Out </a> 
@@ -36,7 +36,7 @@ session_start();
                     } else if ($_SESSION['id_Roles'] == 2) {
                         ?> 
                         <li>  
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="gamer/crudGamer.php"> <?php echo $_SESSION['name'];?> </a>
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="gamer/crudGamer.php"> GAMER</a>
                         </li>
                         <li>
                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="../db/logout.php"> Log Out </a> 

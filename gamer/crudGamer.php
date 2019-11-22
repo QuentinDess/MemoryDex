@@ -13,7 +13,7 @@ include '../security/security_gamer.php';
 // READ du USER dans un tableau avec association de la commande pour UPDATE ou DELETE 
 
 $dbUser = 'root';
-$dbPass = '';
+$dbPass = '000000';
 // Connection with db
 $dbConnection = new PDO('mysql:host=localhost;dbname=MemoryDex', $dbUser, $dbPass);
 // Check username and password 
@@ -28,7 +28,7 @@ $dbCheck->execute();
 $data = $dbCheck->fetch(PDO::FETCH_ASSOC);
 // Table de présentation des informations de l'utilisateur 
 ?> 
-<div class="container">
+<div class="crudgamer_container">
     <table id="table">
         <thead id="row" class="header-row">
             <tr>
