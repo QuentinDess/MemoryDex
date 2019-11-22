@@ -1,17 +1,16 @@
 <?php
 
-session_start();
+include '../templates/header_File.php';
 //create d'une ligne dans la table GAME 
 
-// Check connection
+
 if (isset($_GET) && !empty ($_GET)) {
     if (isset($_GET["score"]) && !empty ($_GET["score"]) ) {
-        // Connection with db
-        
+        // appel fonction de connexion
         include 'dbconnexion.php';
-        // Check username and password 
+        // Insertion du score dans la table Game
         $dbQuery = "INSERT INTO  Game(score, id_Users) values(:score, :id_session_users)";
-        // Préparation de la requête 
+         
         $dbInsertScore = $dbConnection->prepare($dbQuery);
         $dbInsertScore->bindParam(":score", $_GET["score"]);
         $dbInsertScore->bindParam(":id_session_users", $_SESSION['id']);
