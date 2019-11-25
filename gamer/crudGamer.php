@@ -5,19 +5,9 @@ include '../security/security_gamer.php';
 
 
 
-// Création USERS
-
 // READ des USERS dans un tableau avec association de la commande pour UPDATE ou DELETE 
-
-
-// READ du USER dans un tableau avec association de la commande pour UPDATE ou DELETE 
-
-$dbUser = 'root';
-$dbPass = '000000';
-// Connection with db
-$dbConnection = new PDO('mysql:host=localhost;dbname=MemoryDex', $dbUser, $dbPass);
+include '../db/dbconnexion.php';
 // Check username and password 
-
 $dbQuery = "SELECT id, name, password FROM Users WHERE id = :id";
 // Préparation de la requête 
 $dbCheck = $dbConnection->prepare($dbQuery);
@@ -26,6 +16,7 @@ $dbCheck->bindParam(':id', $_SESSION['id']);
 $dbCheck->execute();
 // Récupérer le résultat de la requête
 $data = $dbCheck->fetch(PDO::FETCH_ASSOC);
+// Table de présentation des informations de l'utilisateur 
 // Table de présentation des informations de l'utilisateur 
 ?> 
 <div class="crudgamer_container">
